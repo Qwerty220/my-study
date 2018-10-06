@@ -1,8 +1,10 @@
 # Mongo
 
-MongoDB – это нереляционная база данных с открытым исходным кодом, поддерживающая документоориентированные системы хранения объектов в формате, подобном JSON. Она использует гибкую модель данных, позволяющую хранить данные любой структуры, и имеет широкий набор возможностей, включая полную поддержку индексов, сегментирование и репликацию. 
+### Введение
 
+MongoDB – это нереляционная база данных с открытым исходным кодом, поддерживающая документоориентированные системы хранения объектов в формате, подобном JSON. Она использует гибкую модель данных, позволяющую хранить данные любой структуры, и имеет широкий набор возможностей, включая полную поддержку индексов, сегментирование и репликацию.
 
+Благодаря отсутствию структурированной схемы, Mongo может расти и изменяться вместе с моделью данных. Если вы работаете в недавно образованной компании, которая лелеет грандиозные планы или уже накопила столько данных, что возникла потребность в горизонтальном масштабировании, то присмотритесь к MongoDB.
 
 | **SQL** | **MongoDB** |
 | :--- | :--- |
@@ -13,6 +15,8 @@ MongoDB – это нереляционная база данных с откр
 | Индекс | Индекс |
 | Представление | Представление |
 | Вложенная таблица или объект | Встроенный документ |
+
+### Установка
 
 Официальный образ [https://hub.docker.com/\_/mongo/](https://hub.docker.com/_/mongo/)
 
@@ -30,74 +34,36 @@ vitalij$ docker run --name mongo \
 
 ![](/assets/10042134.png)
 
-![](/assets/10042137.png)
+![](/assets/import_10062026.png)
 
 ```bash
-db.getCollection('startup_log').find({})
-
 /* 1 */
 {
-    "_id" : "bb4850459e5e-1538676716625",
-    "hostname" : "bb4850459e5e",
-    "startTime" : ISODate("2018-10-04T18:11:56.000Z"),
-    "startTimeLocal" : "Thu Oct  4 18:11:56.625",
-    "cmdLine" : {
-        "net" : {
-            "bindIp" : "127.0.0.1",
-            "port" : 27017,
-            "ssl" : {
-                "mode" : "disabled"
-            }
-        },
-        "processManagement" : {
-            "fork" : true,
-            "pidFilePath" : "/tmp/docker-entrypoint-temp-mongod.pid"
-        },
-        "systemLog" : {
-            "destination" : "file",
-            "logAppend" : true,
-            "path" : "/proc/1/fd/1"
-        }
+    "system" : {
+        "currentTime" : ISODate("2018-10-06T17:21:27.894Z"),
+        "hostname" : "5f6af28cf764",
+        "cpuAddrSize" : 64,
+        "memSizeMB" : 1998,
+        "numCores" : 2,
+        "cpuArch" : "x86_64",
+        "numaEnabled" : false
     },
-    "pid" : NumberLong(24),
-    "buildinfo" : {
-        "version" : "4.0.1",
-        "gitVersion" : "54f1582fc6eb01de4d4c42f26fc133e623f065fb",
-        "modules" : [],
-        "allocator" : "tcmalloc",
-        "javascriptEngine" : "mozjs",
-        "sysInfo" : "deprecated",
-        "versionArray" : [ 
-            4, 
-            0, 
-            1, 
-            0
-        ],
-        "openssl" : {
-            "running" : "OpenSSL 1.0.2g  1 Mar 2016",
-            "compiled" : "OpenSSL 1.0.2g  1 Mar 2016"
-        },
-        "buildEnvironment" : {
-            "distmod" : "ubuntu1604",
-            "distarch" : "x86_64",
-            "cc" : "/opt/mongodbtoolchain/v2/bin/gcc: gcc (GCC) 5.4.0",
-            "ccflags" : "-fno-omit-frame-pointer -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch -Werror -O2 -Wno-unused-local-typedefs -Wno-unused-function -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-missing-braces -fstack-protector-strong -fno-builtin-memcmp",
-            "cxx" : "/opt/mongodbtoolchain/v2/bin/g++: g++ (GCC) 5.4.0",
-            "cxxflags" : "-Woverloaded-virtual -Wno-maybe-uninitialized -std=c++14",
-            "linkflags" : "-pthread -Wl,-z,now -rdynamic -Wl,--fatal-warnings -fstack-protector-strong -fuse-ld=gold -Wl,--build-id -Wl,--hash-style=gnu -Wl,-z,noexecstack -Wl,--warn-execstack -Wl,-z,relro",
-            "target_arch" : "x86_64",
-            "target_os" : "linux"
-        },
-        "bits" : 64,
-        "debug" : false,
-        "maxBsonObjectSize" : 16777216,
-        "storageEngines" : [ 
-            "devnull", 
-            "ephemeralForTest", 
-            "mmapv1", 
-            "wiredTiger"
-        ]
-    }
+    "os" : {
+        "type" : "Linux",
+        "name" : "Ubuntu",
+        "version" : "16.04"
+    },
+    "extra" : {
+        "versionString" : "Linux version 4.9.87-linuxkit-aufs (root@95fa5ec30613) (gcc version 6.4.0 (Alpine 6.4.0) ) #1 SMP Wed Mar 14 15:12:16 UTC 2018",
+        "libcVersion" : "2.23",
+        "kernelVersion" : "4.9.87-linuxkit-aufs",
+        "cpuFrequencyMHz" : "0.000",
+        "cpuFeatures" : "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht pbe syscall nx lm constant_tsc rep_good nopl xtopology nonstop_tsc eagerfpu pni pclmulqdq dtes64 ds_cpl ssse3 cx16 xtpr pcid sse4_1 sse4_2 popcnt aes xsave avx f16c rdrand hypervisor lahf_lm kaiser fsgsbase erms xsaveopt arat",
+        "pageSize" : NumberLong(4096),
+        "numPages" : 511735,
+        "maxOpenFiles" : 1048576
+    },
+    "ok" : 1.0
 }
 ```
 
