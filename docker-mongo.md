@@ -1,4 +1,4 @@
-# Mongo
+# MongoDB
 
 ### Введение
 
@@ -220,6 +220,4 @@ db.system.profile.find()
 ```
 
 ![](/assets/9432.png)
-
-
 
