@@ -7,7 +7,7 @@
 Официальный образ [https://hub.docker.com/\_/rabbitmq/](https://hub.docker.com/_/rabbitmq/)
 
 ```bash
-docker run -d --hostname rabbit \
+ docker run -d --hostname rabbit \
     --name rabbit \
     -p 15672:15672 \
     -p 5672:5672 \
