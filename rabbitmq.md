@@ -1,8 +1,8 @@
-# **RabbitMQ**
+# RabbitMQ
 
 Платформа, реализующая систему обмена сообщениями между компонентами программной системы на основе стандарта AMQP.
 
-### Установка
+## Установка
 
 Официальный образ [https://hub.docker.com/\_/rabbitmq/](https://hub.docker.com/_/rabbitmq/)
 
@@ -20,5 +20,5 @@
 
 [http://localhost:15672/\#/](http://localhost:15672/#/)
 
-![](/assets/4633.png)
+![](.gitbook/assets/4633.png)
 

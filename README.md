@@ -1,7 +1,9 @@
-# My Awesome Book
+# Introduction
 
 This file file serves as your book's preface, a great place to describe your book's content and ideas.
 
+{% tabs %}
+{% tab title="Java" %}
 ```java
 package com.epam.university.java.core.task034;
 
@@ -60,6 +62,6 @@ public interface Person {
     void setPhoneNumbers(Collection<PhoneNumber> phoneNumbers);
 }
 ```
-
-
+{% endtab %}
+{% endtabs %}
 

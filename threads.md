@@ -1,4 +1,6 @@
+# threads
+
 Threads
 
-![](/assets/Thread.png)
+![](.gitbook/assets/thread.png)
 

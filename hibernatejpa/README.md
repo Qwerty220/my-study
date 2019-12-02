@@ -1,4 +1,6 @@
-```
+# Hibernate/JPA
+
+```text
 postgres=# select * from review;
  id |  comment  | fk_book 
 ----+-----------+---------
@@ -11,8 +13,5 @@ postgres=# select * from user;
 ----------
  postgres
 (1 row)
-
 ```
-
-
 
